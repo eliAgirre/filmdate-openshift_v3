@@ -1,0 +1,434 @@
+/* ************************************************************************************************
+											Selector UNIVERSAL
+************************************************************************************************ */
+
+*{
+	margin: 0px;
+	padding: 0px;
+
+}
+
+/* ************************************************************************************************
+											Selectores por TIPO
+************************************************************************************************ */
+
+/* Cuerpo de toda la página */
+body{
+	background-color: #f2efef;
+	width: 100%; /* Para que ocupe toda la pantalla */
+
+}
+
+/* Etiquetas en bloque */
+header, section, footer, nav {
+
+	display: block;
+}
+
+h4 a{
+
+	color: #66cccc;
+
+}
+
+h4 a:hover{
+	color: #478F8F;
+	text-decoration: none;
+}
+
+
+/* ************************************************************************************************
+											Selectores por CLASE
+************************************************************************************************ */
+
+/* Imagen corporativa */
+.imgLogo{
+	content:url("../images/logotxiki_gris.png");
+}
+
+/* Botón login */
+
+.btn-login{
+
+	cursor: pointer;
+	margin: 0px;
+}
+
+.peli{
+
+	position: relative;
+	float: left;
+	margin: 30px;
+	
+}
+
+.text {
+	font-size: 60px;
+	font-family: 'Oswald', sans-serif;
+    position: absolute;
+    top: 0;
+    color:#4D4D4D;
+    background-color:rgba(255,255,255,0.8);
+    width: 160px;
+    height: 230px;
+    padding-top:60px;
+    text-align: center;
+    z-index: 10;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.text:hover {
+    opacity:0.8;
+}
+
+.descrip{
+
+	width: 160px;
+	height: 348px;
+
+}
+
+.descrip:hover{ 
+
+	-webkit-transform:scale(1.05);
+
+ }
+
+.info{
+
+	border: 2px solid blue;
+	display: -webkit-box; /* Chrome*/
+	-webkit-box-orient: horizontal; /* encabezado en horizontal */
+
+}
+
+.descrip p{
+
+	color: #333333;
+	font-size: 13px;
+}
+
+.link{/*estilos para los link del menu, para que no coja bootstrap*/
+	color: #B2B2B2;
+	padding-right: 20px;
+	opacity: 0.9;
+	text-decoration: none;
+}
+
+.link:hover{
+	color: #66cccc;
+	text-decoration: none;
+}
+
+/*imagenes de redes sociales*/
+.red{
+	cursor: pointer;
+	float: right;
+	padding-right:14px;
+}
+
+
+
+/* ************************************************************************************************
+											Selectores por ID
+************************************************************************************************ */
+
+/* Encabezado ************************************/
+#header{
+
+	position: relative;
+	z-index: 2;
+	display: -webkit-box; /* Chrome*/
+	-webkit-box-orient: horizontal; /* encabezado en horizontal */
+	height: 50px;
+}
+
+
+/* Imagen corporativa */
+#logo{
+
+	padding-left: 26px;
+	padding-top: 12px;
+	width: 200px;
+	min-width: 100px;
+	opacity: 0.9;
+}
+
+/* Menú */
+#menu_nav{
+
+  margin-top: 17px;
+  position: absolute;
+  right: 0;
+  width: 555px;
+
+}
+
+#menu_nav li{ 
+
+	display: inline-block; /* Para poner el menú en horizontal */
+
+}
+
+/* Cartelera */
+#cartelera{
+	padding: 5px;
+	padding-left: 110px;
+	width: 100%;
+	background-color: #f2efef;
+
+}
+
+#cartelera h3{
+
+	color: #cccccc;
+	margin-left: 30px;
+	
+}
+
+/* Próximamente */
+#proximamente{
+
+	padding: 5px;
+	padding-left: 110px;
+	width: 100%;
+	
+}
+
+#proximamente h3{
+
+	color: #A29F9F;
+	margin-left: 30px;
+
+}
+
+/* Buscador */
+#buscador{
+	padding-right: 15px;
+}
+
+#search input[type="text"] {
+	
+	outline: none;
+    background:   url(../images/busca_gris.png) no-repeat 10px 6px #f2efef;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #B2B2B2;
+    opacity: 0.9
+    font-size: 13px;
+    color: #B2B2B2;
+    width: 160px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+}
+
+#search input[type="text"]:focus {
+    width: 173px;
+}
+
+/* Botón oculto para aparecer el menú */
+#pull{
+
+	display: none;
+}
+
+#message{
+
+	margin-top: 75px;
+
+}
+
+/* Footer */
+#foot{
+  width: 100%;
+  position:absolute;
+  top: 1240px;
+  height: 66px;
+  padding: 3px;
+  
+}
+
+#foot a{
+
+  position: relative;
+  top: 16px;
+  color: #999999;
+  padding-right:18px;
+  float: right;
+
+}
+
+#foot a:hover{
+
+  color: #66cccc;
+  text-decoration: none;
+
+}
+
+
+
+/* ************************************************************************************************
+                                            RESPONSIVE
+************************************************************************************************ */
+
+/*TABLET:Cuando la anchura de la ventana contenga como máximo 700px se cambia el diseño */
+@media all and (max-width: 768px){
+
+	/*Después de aparecer el menú, aparece el icono */
+    nav a#pull:after {
+
+        content: "";
+        background: url('../img/nav-icon.png') no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+
+    }
+
+	nav ul {
+
+       display: none;
+       height: auto;
+
+    }
+
+    /* Footer */
+	footer{
+		display: none;
+		background: none;
+	}
+
+	footer a{
+		display: none;
+	}
+
+	.imgLogo{ content:url("../images/logotxiki_gris.png"); }
+
+	/* estilos para los link del menu, para que no coja bootstrap */
+	.link{ 
+		color: #f2efef;
+		padding-right: 20px;
+		opacity: 0.9;
+		text-decoration: none;
+	}
+
+	.link:hover{
+
+		color: grey;
+		text-decoration: none;
+
+	}
+
+	.peli{
+		margin: 10px;
+
+	}
+
+	.red{
+		display: none;
+	}
+
+	/* Encabezado ************************************/
+	#header{
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		display: block;
+		background-color: #f2efef;
+	}
+	
+	#logo{ padding-left: 10px; }
+
+	
+
+	/* Menú */
+	#menu_nav {
+		margin-top: 0px;
+		padding-left: 20px;
+		background-color: #c6c5c5;
+		width: 100%; /* Ocupa toda la pantalla */
+	}
+
+	/* Item de las listas desordenadas */
+	#menu_nav li{
+		padding: 7px;
+		display: block; 
+
+	}
+
+    /* Aparece el botón para desplegar el menú */
+    #pull {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 17px;
+    }    
+
+    #search input[type="text"] {
+	    color: #B2B2B2;
+	}	
+
+	#cartelera, #proximamente{
+
+		position: relative;
+		left: 0px;
+		top: 0px;
+
+	}
+
+    /* Cartelera */
+	#cartelera{
+
+		margin-top: 50px;
+		height: 2200px;
+		padding: 12px;
+		padding-left: 60px;
+		width: 100%;
+
+	}
+
+	#proximamente{
+
+		margin-top: 50px;
+		height: 2200px;
+		padding: 12px;
+		padding-left: 60px;
+		width: 100%;
+
+	}
+
+	#proximamente h3, #cartelera h3{
+		margin-left: 9px;
+
+	}
+
+} 
+
+/*SMARTPHONE:Cuando la anchura de la ventana contenga como máximo 320px se cambia el diseño */
+@media all and (max-width: 320px){
+
+	#cartelera{
+		padding: 12px;
+		padding-left: 60px;
+		width: 100%;
+
+	}
+
+	#proximamente{
+		padding: 12px;
+		padding-left: 60px;
+		width: 100%;
+
+	}
+}

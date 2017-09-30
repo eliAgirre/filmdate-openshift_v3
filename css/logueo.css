@@ -1,0 +1,429 @@
+/* ************************************************************************************************
+											Selector UNIVERSAL
+************************************************************************************************ */
+
+*{
+	margin: 0px;
+	padding: 0px;
+
+}
+
+/* BASIC RESET */
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{margin:0; padding:0;}
+
+
+/* ************************************************************************************************
+											Selectores por TIPO
+************************************************************************************************ */
+
+/* Cuerpo de toda la página */
+body{
+
+	width: 100%; /* Para que ocupe toda la pantalla */
+}
+
+/* Etiquetas en bloque */
+header, section, footer, nav {
+	display: block;
+}
+
+
+
+/***********************************************************************************************
+									   Selectores por CLASE 
+***********************************************************************************************/
+
+/* Botón login */
+.btn-login{
+
+	cursor: pointer;
+	margin: 0px;
+}
+
+/*icono animado*/
+.glyphicon-refresh-animate {
+    -webkit-animation: spinDos 1.5s infinite linear;
+    /*para cambiar color
+    -webkit-animation: camColor 1.5s infinite linear;*/
+
+}
+
+@-webkit-keyframes spinDos {
+    from { -webkit-transform: translate(0px,5px);}
+    to { -webkit-transform: translate(0px,30px);}
+}
+
+/*estilos para los link del menu, para que no coja bootstrap*/
+.link{
+	color: #B2B2B2;
+	padding-right: 20px;
+	opacity: 0.9;
+	text-decoration: none;
+}
+
+.link:hover{
+	color: #66cccc;
+	text-decoration: none;
+}
+
+/* Imágen de la película */
+.peli{
+
+	position: relative;
+	float: left;
+	margin: 38px;
+
+}
+
+.text {
+	font-size: 60px;
+	font-family: 'Oswald', sans-serif;
+    position: absolute;
+    top: 0;
+    color:#4D4D4D;
+    background-color:rgba(255,255,255,0.8);
+    width: 160px;
+    height: 230px;
+    padding-top:60px;
+    text-align: center;
+    z-index: 10;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.text:hover {
+    opacity:0.8;
+}
+
+/* Información de la película ************************************/
+.descrip{
+	width: 160px;
+}
+
+.descrip p{
+	color: #333333;
+	font-size: 13px;
+}
+
+.descrip h4{
+	color: #66cccc;
+}
+
+/* Botón para ir a cartelera o proximamente */
+.vermas{
+
+	clear: both;
+	float: right;
+	margin-top: 0px;
+	margin-right: 85px;
+	cursor: pointer;
+	
+}
+
+/*imagenes de redes sociales*/
+.red{
+	cursor: pointer;
+	float: right;
+	padding-right:14px;
+}
+
+
+/* ************************************************************************************************
+											Selectores por ID
+************************************************************************************************ */
+
+/* Layout */
+#container{
+
+	width: 100%;
+
+}
+
+/* Encabezado ************************************/
+#header{
+
+	position: relative;
+	z-index: 2;
+	display: -webkit-box; /* Chrome*/
+	-webkit-box-orient: horizontal; /* encabezado en horizontal */
+	height: 50px;
+	background-color: #f2efef;
+}
+
+/* Imágen corporativa*/
+#logo{
+
+	padding-left: 26px;
+	padding-top: 12px;
+	width: 200px;
+	min-width: 100px;
+	opacity: 0.9;
+}
+
+/* Menú */
+#menu_nav{
+	margin-top: 17px;
+	position: absolute;
+	right: 0;
+	width: 555px;
+}
+
+/* Para poner el menú en horizontal */
+#menu_nav li{ 
+
+	display: inline-block; 
+
+}
+
+/* Botón oculto para aparecer el menú */
+#pull{
+
+	display: none;
+}
+
+/* Header navigation of slider */
+#headernav-outer { 
+
+	position:relative; 
+	top: 285px;
+	margin:0 auto; 
+	width: 95%; 
+
+}
+
+/* Botón para ir hacia abajo */
+#div_abajo{
+
+	height: 80px;
+	margin-left: 0px;
+}
+
+/* Listado de cartelera */
+#cartelera{
+
+	padding: 5px;
+	padding-left: 50px;
+	width: 100%;
+	/*border: 3px solid green;*/
+	height: 600px;
+	background-color: #f2efef;
+
+}
+
+/* Título de la cartelera */
+#cartelera h3{
+
+	color: #cccccc;
+	margin-left: 30px;
+	
+}
+
+/* Próximamente */
+#proximamente{
+	background-color: #E6E6E6;
+	padding: 5px;
+	padding-left: 50px;
+	width: 100%;
+	position: absolute;
+	/*border: 3px solid orange;*/
+	height: 650px;
+
+}
+
+#proximamente h3{
+	color: #f2efef;
+	margin-left: 30px;
+}
+
+/* Buscador */
+#buscador{
+	padding-right: 15px;
+}
+
+#search input[type="text"] {
+
+	outline: none;
+    background:   url(../images/busca_gris.png) no-repeat 10px 6px #f2efef;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #B2B2B2;
+    opacity: 0.9
+    font-size: 13px;
+    color: #B2B2B2;
+    width: 160px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+}
+
+#search input[type="text"]:focus {
+    width: 173px;
+}
+
+/* Footer */
+#foot{
+	width: 100%;
+	position: absolute;
+	top: 100px;
+	height: 66px;
+	padding: 3px;
+}
+
+#foot a{
+	position: relative;
+	top: 16px;
+	color: #999999;
+	padding-right:18px;
+	float: right;
+}
+
+#foot a:hover{
+	color: #66cccc;
+	text-decoration: none;
+}
+
+/* ************************************************************************************************
+                                            RESPONSIVE
+************************************************************************************************ */
+
+/*TABLET:Cuando la anchura de la ventana contenga como máximo 700px se cambia el diseño */
+@media all and (max-width: 768px){
+
+	nav ul {
+
+       display: none;
+       height: auto;
+
+    }
+
+    /*Después de aparecer el menú, aparece el icono */
+    nav a#pull:after {
+
+        content: "";
+        background: url('../img/nav-icon.png') no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+
+    }
+
+    /* Footer */
+	footer{
+		display: none;
+		background: none;
+	}
+
+	footer a{
+		display: none;
+	}
+
+	.imgLogo{ content:url("../images/logotxiki_gris.png"); }
+
+	.slider{ display: none; }
+
+	.peli{ margin: 10px; }
+
+	.red{ display: none; }
+
+	#div_abajo{ display: none; }
+
+	#btn_abajo{ display: none; }
+
+	#cartelera, #proximamente{
+
+		position: relative;
+		left: 0px;
+		top: 0px;
+	}	
+
+	/* Encabezado ************************************/
+	#header{
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		display: block;
+		background-color: #f2efef;
+	}
+	
+	#logo{ padding-left: 10px; }
+
+	/* Menú */
+	#menu_nav {
+		margin-top: 0px;
+		padding-left: 20px;
+		background-color: #c6c5c5;
+		width: 100%; /* Ocupa toda la pantalla */
+	}
+
+	/* Item de las listas desordenadas */
+	#menu_nav li{
+
+		padding: 7px;
+		display: block; 
+	}
+
+    /* Aparece el botón para desplegar el menú */
+    #pull {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 17px;
+    }    
+
+    #search input[type="text"] {
+	    border: 2px solid #f2efef;
+	    color: #f2efef;
+	}	
+
+    /* Cartelera */
+	#cartelera{
+		margin-top: 50px;
+		height: 2200px;
+		padding: 12px;
+		padding-left: 60px;
+		width: 100%;
+	}
+
+	#proximamente{
+		margin-top: 50px;
+		height: 2200px;
+		padding: 12px;
+		padding-left: 60px;
+		width: 100%;
+	}
+
+	#proximamente h3{
+		margin-left: 9px;
+	}
+
+	#cartelera h3{
+		margin-left: 9px;
+	}	
+
+} 
+
+/*SMARTPHONE:Cuando la anchura de la ventana contenga como máximo 320px se cambia el diseño */
+@media all and (max-width: 320px){
+
+	#cartelera{
+		padding: 12px;
+		padding-left: 60px;
+		width: 100%;
+
+	}
+
+	#proximamente{
+		padding: 12px;
+		padding-left: 60px;
+		width: 100%;
+	}
+}

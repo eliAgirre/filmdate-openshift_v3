@@ -1,0 +1,504 @@
+/* ************************************************************************************************
+                      Selectores por TIPO
+************************************************************************************************ */
+
+/* BASIC RESET */
+ul,ol,li,form,input{margin:0; padding:0;}
+
+body {
+  margin: 0;
+  background: #E6E6E6;
+
+}
+
+/* Menú  ***********************************************************/
+header,nav{
+  display: block;
+  
+}
+
+h2{ color: #66cccc; }
+
+/* Video  ***********************************************************/
+video {
+
+  position: absolute;
+  top: -90px;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  height: 760px;
+  z-index: -100;
+  background-color: #cccccc;
+  background-size: cover;
+  transition: 1s opacity;
+
+}
+
+
+/***********************************************************************************************
+                     Selectores por CLASE 
+***********************************************************************************************/
+
+/* Botón login */
+.btn-login{
+
+  cursor: pointer;
+  margin: 0px;
+  
+}
+
+/*estilos para los link del menu, para que no coja bootstrap*/
+.link{
+  color: #f2efef;
+  padding-right: 20px;
+  opacity: 0.9;
+  text-decoration: none;
+  
+}
+
+.link:hover{
+  color: grey;
+  text-decoration: none;
+}
+
+/*estilos para los link del los usuarios*/
+.linkUsu{
+  font-weight: bold;
+  color: #66cccc;
+  padding-right: 20px;
+  opacity: 0.9;
+  text-decoration: none;
+  
+}
+
+.linkUsu:hover{
+  color: grey;
+  text-decoration: none;
+}
+
+/* Criticas  ***********************************************************/
+.criticas{
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 800px;
+  height: 500px;
+
+}
+
+.stopfade { 
+   opacity: .8;
+}
+
+
+/*Valoración estrellas*/
+.ec-stars-wrapper {
+background: none;
+  /* Espacio entre los inline-block (los hijos, los `a`) 
+     http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
+  font-size: 0;
+  /* Podríamos quitarlo, 
+    pero de esta manera (siempre que no le demos padding), 
+    sólo aplicará la regla .ec-stars-wrapper:hover a cuando
+    también se esté haciendo hover a alguna estrella */
+  display: inline-block;
+}
+.ec-stars-wrapper a {
+  background: none;
+  text-decoration: none;
+  display: inline-block;
+  /* Volver a dar tamaño al texto */
+  font-size: 30px;
+  color: #FFFFB2;
+}
+
+.ec-stars-wrapper:hover a {
+  background: none;
+  color: #FFCC00;
+  text-decoration: none;
+  -webkit-transform:scale(1.10);
+}
+/*
+ * El selector de hijo, es necesario para aumentar la especifidad
+ */
+.ec-stars-wrapper > a:hover ~ a {
+  background: none;
+  color: #FFFFB2;
+  text-decoration: none;
+  -webkit-transform:scale(1);
+}
+
+/*icono animado*/
+.glyphicon-refresh-animate {
+    -webkit-animation: spin2 1s infinite linear;
+    -moz-animation: spin2 1s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: translate(0px,0px);}
+    to { -webkit-transform: translate(0px,50px);}
+}
+
+@-moz-keyframes spin2 {
+    from { -moz-transform: translate(0px,0px);}
+    to { -moz-transform: translate(0px,50px);}
+}
+
+/* Redes sociales */
+.red{
+  
+  cursor: pointer;
+  float: right;
+  padding-right:14px;
+
+}
+
+/* ************************************************************************************************
+                      Selectores por ID
+************************************************************************************************ */
+
+/* Encabezado en horizontal */
+#header{
+
+  position: relative;
+  z-index: 2;
+  display: -webkit-box; /* Chrome*/
+  display: flex; /* Moz*/
+  -webkit-box-orient: horizontal; 
+  -moz-box-orient: horizontal; 
+  height: 50px;
+
+}
+
+/* Menú  ***********************************************************/
+/* Imágen corporativa */ 
+#logo{
+  padding-left: 26px;
+  padding-top: 10px;
+  width: 200px;
+  min-width: 100px;
+  opacity: 0.9;
+}
+
+/* Menú */
+#menu_nav{
+
+  margin-top: 17px;
+  position: absolute;
+  right: 0;
+  width: 555px;
+
+}
+
+/* Para poner el menú en horizontal */
+#menu_nav li{ 
+
+  display: inline-block; 
+
+}
+
+/* Botón oculto para aparecer el menú */
+#pull{
+
+  display: none;
+}
+
+/* Botón para ir hacia abajo */
+#div_abajo{
+
+  z-index: 1;
+  position: relative;
+  left: 20%;
+  top:542px;
+  width: 80%;
+  height: 80px;
+  margin-left: 0px;
+
+}
+
+/* Buscador */
+#buscador{ padding-right: 15px; }
+
+#search input[type="text"] {
+  outline: none;
+    background:   url(../images/busca.png) no-repeat 10px 6px #fcfcfc;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #bebebe;
+    opacity: 0.9
+    font-size: 13px;
+    color: #bebebe;
+    width: 160px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+}
+
+#search input[type="text"]:focus { width: 173px; }
+
+/* InfoPeli  ***********************************************************/
+#infopeli {
+  text-align: justify;
+  float: right;
+  padding: 80px;
+  margin-top: 8%;
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-weight:100; 
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 2rem;
+  width: 580px;
+  font-size: 1.2rem;
+  height: 430px;
+}
+
+#infopeli h1{
+  font-size: 50px;
+  text-align: left;
+}
+
+#infopeli p{
+  font-size: 15px;
+}
+
+#limitar {
+
+  color: #064393;
+  width: 100%; 
+  -moz-border-radius: 4px; 
+  border-radius: 4px; 
+  display: block; padding: 10px 0; 
+  margin: 10px auto 10px; 
+  clear: both; 
+}
+
+#noVacia{
+
+  color: #c00 !important;
+  width: 100%; 
+  -moz-border-radius: 4px; 
+  border-radius: 4px; 
+  display: block; padding: 10px 0; 
+  margin: 10px auto 10px; 
+  clear: both; }
+
+/* Criticas  ***********************************************************/
+#contCriticas{
+
+  background-color: #E6E6E6;
+  position: absolute;
+  top: 580px;
+  width: 100%;
+  height: 800px;
+}
+
+#coment{
+
+  width: 100%;
+  height: auto; 
+}
+
+/* Botones para el vídeo */
+#buttons{
+
+  position: absolute;
+  top:513px;
+  left: 25px;
+  width:70px;
+  height: 22px;
+  cursor: pointer;
+}
+
+#buttons img{ width:35px; }
+
+/* Botón para ampliar el vídeo */
+#amplia{
+
+  position: absolute;
+  top:517px;
+  left: 75px;
+  width:30px;
+  height: 22px;
+  cursor: pointer;
+}
+
+#seguir,#siguiendo{
+
+  margin: 30px 30px 40px 440px;
+  font-size: 18px;
+  height: 42px;
+  width: 100px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: transparent;
+  border-style: solid;
+  border-color: #fff;
+  border-width:1.5px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#warning{
+
+  border: 1px solid #EBD699;
+  width: 100%;
+  background-color: #F5EBCC;
+  border-radius: 2px;
+  padding: 15px;
+  margin-bottom: 8px;
+  color: #B88A00;
+}
+
+#texti{ width:335%; }
+
+#critica, #estilotextarea{ border-radius: 5px; }
+
+
+/* ************************************************************************************************
+                                            RESPONSIVE
+************************************************************************************************ */
+
+/*Cuando la anchura de la ventana contenga como máximo 768px se cambia el diseño */
+@media all and (max-width: 768px){
+
+  nav ul {
+
+    display: none;
+    height: auto;
+
+  }
+
+  /*Después de aparecer el menú, aparece el icono */
+  nav a#pull:after {
+
+    content: "";
+    background: url('../img/nav-icon.png') no-repeat;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+
+  }
+
+  video{ display: none; }
+
+  .imgLogo{ content:url("../images/logotxiki_gris.png"); }
+
+  .red{ display: none; }
+
+  #bgvid { display: none; } 
+
+  #div_abajo{ display: none; }
+
+  #buttons{ display: none; }
+
+  #amplia{ display: none; }
+
+  /* Encabezados ************************************/
+  #header{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    display: block;
+    background-color: #f2efef;
+  }
+
+  /* Menú */
+  #menu_nav {
+    margin-top: 0px;
+    padding-left: 20px;
+    background-color: #c6c5c5;
+    width: 100%; /* Ocupa toda la pantalla */
+  }
+
+  /* Item de las listas desordenadas */
+  #menu_nav li{
+    padding: 10px;
+    display: block; 
+
+  }
+
+  #search input[type="text"] {
+    border: 2px solid #f2efef;
+    color: #f2efef;
+  }
+
+  /* Aparece el botón para desplegar el menú */
+  #pull {
+    
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 17px;
+  }
+
+  /* Info peli  ***********************************************************/
+  #infopeli{
+
+    margin-top: 50px;
+    width: 100%;
+    background-color: #999999;
+    height: 100%;
+    min-height: 400px;
+  }
+
+  #seguir,#siguiendo{ margin: 20px 0px 0px 600px; }
+
+  /* Criticas  ***********************************************************/
+  .criticas{
+  position: absolute;
+  top: 4%;
+  padding-right: 4%;
+  left: 2%;
+  width: 100%;
+  height: auto;
+
+  }
+
+  #contCriticas{
+    width: 100%;
+    position: relative;
+    padding-top: 0px;
+    top: 500px;
+
+  }
+
+  #coment{
+  width: 100%;
+  height: auto;
+ 
+  }
+
+  #texti{
+    width:140%;
+  }  
+
+} 
+
+/*SMARTPHONE:Cuando la anchura de la ventana contenga como máximo 399px se cambia el diseño */
+@media all  and (max-width: 399px){
+
+  #seguir,#siguiendo{
+    margin: 20px 0px 0px 0px;
+    float: left;
+  }
+
+  #infopeli{
+
+    min-height: 500px;
+
+  }
+  #contCriticas{
+    top: 600px;
+
+  }
+
+}

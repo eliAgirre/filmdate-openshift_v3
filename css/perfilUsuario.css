@@ -1,0 +1,223 @@
+/* ************************************************************************************************
+                      Selector UNIVERSAL
+************************************************************************************************ */
+* { box-sizing: border-box; }
+
+/* ************************************************************************************************
+                      Selectores por TIPO
+************************************************************************************************ */
+
+/* Make sure draggable area is whole page */
+html, body { height: 100%; }
+body{
+  background-image: url('..//images/fondoUsu.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#sinFondo{
+  background-image: none;
+  background-color: #f2efef;
+}
+
+input#subirImagen{
+  position:absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  width:100%;
+  height:100%;
+  opacity: 0;
+}
+
+
+/***********************************************************************************************
+                     Selectores por CLASE 
+***********************************************************************************************/
+
+.page-wrap {
+
+  width: 960px;
+  margin: 100px auto;
+
+}
+
+.profile { width: 53%; }
+
+.editarDatos { float: right; }
+
+
+
+/* ************************************************************************************************
+                      Selectores por ID
+************************************************************************************************ */
+
+#cont{
+
+  opacity: 0.68;
+  border-radius: 5px;
+  background-color: #fff;
+  position: absolute;
+  top: 13%;
+  left: 10%;
+  width: 80%;  
+}
+
+#perfilTitulo {
+  margin: 0 0 30px 0;
+  border-bottom: 2px solid #66cccc;
+}
+
+#infoUser{ font-size: 15px; }
+
+p#texto,#enviar{
+
+  padding: 6px;
+  text-align: center;
+  color:white;
+  font-weight: bold;
+}
+
+.pelisquesigues{ font-size: 20px; }
+
+/*para el boton de carga de archivos*/
+div#div_file,#enviar{
+
+  position:relative;
+  width:141px;
+  background-color: #66cccc;
+  -webkit-border-radius:5px;
+}
+#bnw,#colour{
+    
+  border: 1.7px solid #66cccc;
+  border-radius: 4px;
+  background: none;
+  color: #66cccc;
+  padding: 5px;
+  font-weight: bold;
+
+}
+
+#areaCanvas{ margin-bottom: 10px; }
+
+#enviar{ border: 0px; }
+
+#mostrarMsg{
+ 
+  -moz-border-radius: 4px; 
+  border-radius: 4px; 
+  display: block; 
+  padding: 5px; 
+  clear: both;
+}
+
+/* ************************************************************************************************
+                      Para la pagina de la API
+************************************************************************************************ */
+.ruta{ margin: 30px 0 60px 0; }
+
+.linkjson{
+  font-size: 25px;
+  color: #999999;
+  font-family: 'Oswald', sans-serif;
+}
+
+.linkjson:hover{
+  color: #66cccc;
+  text-decoration: none;
+}
+
+.apilink{
+  font-size: 15px;
+  text-decoration: none;
+  color: #66cccc;
+}
+
+.apilink:hover{
+  text-decoration: none;
+  color: #999999;
+}
+
+#textoApi{
+  margin: 90px 150px 50px 150px;
+  text-align: justify;
+}
+
+#textoApi h1{
+  margin-bottom: 30px;
+  font-size: 40px;
+  color: #66cccc;
+  font-family: 'Oswald', sans-serif;
+}
+
+#textoApi p{
+  font-size: 16px;
+  color: #999999;  
+}
+
+#foot{
+  position: absolute;
+  top: 1500px;
+}
+
+/* ************************************************************************************************
+                                            RESPONSIVE
+************************************************************************************************ /
+
+/*TABLET:Cuando la anchura de la ventana contenga como máximo 700px se cambia el diseño */
+@media all and (max-width: 768px){
+
+  .page-wrap { 
+
+    width: 768px;
+    margin: 33px auto; 
+
+  }
+
+  .profile { padding-right: 0px; }
+
+  .editarDatos { width: 100%; }
+
+  .apilink{ font-size: 14px; }
+
+  .pelisquesigues{ font-size: 17px; }  
+
+  #cont{
+    padding-left: 20px;
+    left: 10%;
+  }  
+
+  #perfilTitulo {
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-bottom: 1.5px solid #66cccc;
+    min-width: 60px;
+    width: 50%;
+    display: -webkit-box; /* Chrome*/
+    -webkit-flex: 1; /* Safari 6.1+ */
+  }    
+
+  #mostrarMsg{
+
+    -moz-border-radius: 4px; 
+    border-radius: 4px; 
+    display: block; 
+    padding: 0px; 
+    clear: both;
+  }
+
+  #foot{ display: none; }
+
+  #textoApi{ margin: 80px 15px 40px 15px; }
+
+}
+
+/*SMARTPHONE:Cuando la anchura de la ventana contenga como máximo 399px se cambia el diseño */
+@media all  and (max-width: 399px){
+
+  .profile, .page-wrap, .editarDatos, #infoUser, #recargaImagen, .pelisquesigues { width: 290px; }
+
+  #perfilTitulo { width: 80%; }
+}
