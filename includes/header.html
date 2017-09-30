@@ -32,6 +32,7 @@
                         // Diseño en un archivo externo
                         echo "<link href=\"../css/main.css\" rel=\"stylesheet\" type=\"text/css\" >";
                         // Se inicia sesión o reanuda la sesión
+                        session_destroy();
                         session_start();
                         // Si el usuario no está logueado
                         if(!(isset($_SESSION['id_usuario']) && $_SESSION['id_usuario']!='')){
