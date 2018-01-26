@@ -86,7 +86,7 @@ La filmdate ha creado su propia API para terceros.
 
 <br>
 <h3>Enlaces</h3>
-**Enlace OpenShift**: http://filmdate-filmdate.rhcloud.com/
+**Enlace OpenShift** : http://filmdate-filmdate.rhcloud.com/
 
 **Email oficial**: filmdateee@gmail.com
 
