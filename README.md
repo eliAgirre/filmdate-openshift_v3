@@ -94,8 +94,6 @@ La filmdate ha creado su propia API para terceros.
 
 **Información online:**: http://filmtalk.github.io/final/
 
-**Dominio propio**: http://filmdate.tk/
-
 <br />
 <h3>Referencias</h3>
 
