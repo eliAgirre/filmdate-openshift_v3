@@ -40,78 +40,75 @@
                     include_once("../functions/peliculas.php");
                     // Se guarda el array en una variable                    
                     $cartelera=obtenerCartelera();
-                    // Se recorre el array de cartelera y el array de películas bidimensional
-                    foreach ($peliculas['peliculas'] as $field => $array) {
 
+                    $result=array_intersect_key($peliculas['peliculas'],$cartelera);
+                    
+                    foreach ($result as $field => $array) {
+                        
                         echo "<div class='peli'>";
-
-                        foreach ($cartelera as $key => $value) {
+                        
+                        foreach ($array as $campo => $valor) {
                             
-                            // Si el valor coincide, se guardan los datos de la película
-                            if($value===$field){
+                            $id_pelicula;
+                            $titulo;
+                            $year;
+                            $runtime;
+                            $poster;
+                            
+                            if($campo==="_id"){
+    
+                                $id_pelicula=$valor;
 
-                                foreach ($array as $campo => $valor) {
+                            }
+                            
+                            if($campo==="title"){
 
-                                    $id_pelicula;
-                                    $titulo;
-                                    $year;
-                                    $runtime;
-                                    $poster;
+                                $titulo=$valor;
 
-                                    if($campo==="_id"){
-
-                                        $id_pelicula=$valor;
-
-                                    }
-
-                                    if($campo==="title"){
-
-                                        $titulo=$valor;
-
-                                    }
-
-                                    if($campo==="poster"){
-                                        echo "<div class='descrip'>";
-                                        $poster=$valor;
-                                        echo "<a href='perfil-peli.php?peli=$titulo'><span class='text'>";
-
-                                            //Se importan las funciones de valoracion
-                                            include_once("../functions/valoracion.php");
-                                            // Se obtiene la media de la película
-                                            $media=mediaValoracion($id_pelicula);
-
-                                            $media=$media*2;
-                                            // Se convierte a un número entero
-                                            $media=round($media,2);
-                                            echo "<span style='font-size:20px;'
-                                            class='glyphicon glyphicon-star'></span><br/>";
-                                            // Muestra el valor de la media
-                                            echo $media;
-
-                                        // Muestra el poster de la película
-                                        echo"</span><img src=$poster></a><br/><br/>
-                                        <h4><a href='perfil-peli.php?peli=$titulo'>" . $titulo. "</a></h4>";                      
-                                        // Muestra el título y al hacer clic muestra la página de la película correspondiente
-                                    }
-
-                                    if($campo==="year"){
-
-                                        $year=$valor;
-                                        echo "<p>" . $year. "</p>";
-
-                                    }
-
-                                    if($campo==="runtime"){
-
-                                        $runtime=$valor;
-                                        echo "<p>" . $runtime. " mins </p>";
-                                        echo "</div>";
-                                    }
-                                }                                
                             }
 
+                            if($campo==="poster"){
+                                echo "<div class='descrip'>";
+                                $poster=$valor;
+                                echo "<a href='perfil-peli.php?peli=$titulo'><span class='text'>";
+
+                                    //Se importan las funciones de valoracion
+                                    include_once("../functions/valoracion.php");
+                                    // Se obtiene la media de la película
+                                    $media=mediaValoracion($id_pelicula);
+
+                                    $media=$media*2;
+                                    // Se convierte a un número entero
+                                    $media=round($media,2);
+                                    echo "<span style='font-size:20px;'
+                                    class='glyphicon glyphicon-star'></span><br/>";
+                                    // Muestra el valor de la media
+                                    echo $media;
+
+                                // Muestra el poster de la película
+                                echo"</span><img src=$poster></a><br/><br/>
+                                <h4><a href='perfil-peli.php?peli=$titulo'>" . $titulo. "</a></h4>";                      
+                                // Muestra el título y al hacer clic muestra la página de la película correspondiente
+                            }
+                            
+                            if($campo==="year"){
+
+                                $year=$valor;
+                                echo "<p>" . $year. "</p>";
+
+                            }
+
+                            if($campo==="runtime"){
+
+                                $runtime=$valor;
+                                echo "<p>" . $runtime. " mins </p>";
+                                echo "</div>";
+                            }
+                        
                         }
+                        
                         echo "</div>";
+                        
                     }
 
 				?>
